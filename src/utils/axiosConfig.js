@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://entertainment-app-server-4pq5.onrender.com",
+  baseURL: "https://my-movies-backend-ejha.onrender.com",
 });
 
 // Adding a response interceptor
@@ -10,7 +10,7 @@ axiosInstance.interceptors.response.use(
   (error) => {
     console.error("Axios error:", error); // Logging errors to the console
     return Promise.reject(error); // Passing the error to the next handler
-  }
+  },
 );
 
 // Setting default headers if a token is available
